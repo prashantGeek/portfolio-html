@@ -4,6 +4,7 @@ import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Achievements from '@/components/Achievements'
+import GitHubContributions from '@/components/GitHubContributions'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
@@ -18,6 +19,7 @@ export default function Home() {
       <Skills />
       <Achievements />
       <Projects />
+      <GitHubContributions />
       <Testimonials />
       <Contact />
     </div>
