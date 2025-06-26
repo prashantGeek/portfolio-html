@@ -22,9 +22,19 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Achievements', href: '#achievements' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ]
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+      setIsMobileMenuOpen(false)
+    }
+  }
 
   return (
     <motion.nav
@@ -81,7 +91,7 @@ const Navigation = () => {
                 key={item.name}
                 href={item.href}
                 className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleNavClick(item.href)}
               >
                 {item.name}
               </a>
