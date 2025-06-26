@@ -258,3 +258,479 @@ html {
     background: #1f2937;
   }
 }
+
+/* GitHub Contribution Graph Animations */
+@keyframes contribution-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
+@keyframes github-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px rgba(34, 197, 94, 0.3),
+      0 0 10px rgba(34, 197, 94, 0.3),
+      0 0 15px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px rgba(34, 197, 94, 0.6),
+      0 0 20px rgba(34, 197, 94, 0.6),
+      0 0 30px rgba(34, 197, 94, 0.6);
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10%, 90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes code-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+}
+
+/* Techy grid effect */
+.tech-grid {
+  background-image: 
+    linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: tech-grid-move 20s linear infinite;
+}
+
+@keyframes tech-grid-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+/* Holographic effect */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(34, 197, 94, 0.1),
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+  background-size: 250% 250%;
+  animation: holographic-shift 3s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Terminal cursor effect */
+.terminal-cursor::after {
+  content: '▮';
+  animation: terminal-blink 1s infinite;
+  color: #22c55e;
+}
+
+@keyframes terminal-blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Circuit board pattern */
+.circuit-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(34, 197, 94, 0.2) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
+  background-position: 0 0, 20px 20px, 0 0, 0 0;
+}
+
+/* Neon glow effect */
+.neon-glow {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+  animation: neon-flicker 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor;
+  }
+}
+
+/* Cyberpunk scan lines */
+.scan-lines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(34, 197, 94, 0.03) 2px,
+    rgba(34, 197, 94, 0.03) 4px
+  );
+  pointer-events: none;
+  animation: scan-lines-move 2s linear infinite;
+}
+
+@keyframes scan-lines-move {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(4px);
+  }
+}
+
+/* GitHub contribution hover effects */
+.contribution-square {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.contribution-square:hover {
+  transform: scale(1.3) translateZ(0);
+  z-index: 10;
+  border-radius: 2px;
+}
+
+.contribution-square:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #22c55e, #3b82f6, #22c55e);
+  border-radius: 3px;
+  z-index: -1;
+  animation: contribution-border-glow 0.3s ease-out;
+}
+
+@keyframes contribution-border-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Typewriter effect for GitHub stats */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid #22c55e;
+  white-space: nowrap;
+  animation: 
+    typewriter 3s steps(30) 1s infinite,
+    cursor-blink 0.75s step-end infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 50% {
+    border-color: #22c55e;
+  }
+  51%, 100% {
+    border-color: transparent;
+  }
+}
+
+/* Tech loading animation */
+.tech-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34, 197, 94, 0.4),
+    transparent
+  );
+  animation: tech-scan 2s ease-in-out infinite;
+}
+
+@keyframes tech-scan {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* GitHub profile card glow */
+.github-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.8), rgba(31, 41, 55, 0.8));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.github-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(45deg, #22c55e, #3b82f6, #8b5cf6, #22c55e);
+  border-radius: inherit;
+  z-index: -1;
+  animation: github-border-spin 3s linear infinite;
+}
+
+@keyframes github-border-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Matrix background effect */
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-bg::before {
+  content: '01010101 01001110 01010100';
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: rgba(34, 197, 94, 0.1);
+  line-height: 20px;
+  animation: matrix-rain 15s linear infinite;
+  pointer-events: none;
+  white-space: pre;
+  word-break: break-all;
+  z-index: 0;
+}
+
+/* Quantum glow effect */
+.quantum-glow {
+  position: relative;
+}
+
+.quantum-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(34, 197, 94, 0.2) 0%,
+    rgba(59, 130, 246, 0.1) 50%,
+    transparent 70%
+  );
+  animation: quantum-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes quantum-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Real-time GitHub activity indicators */
+.real-time-activity {
+  animation: realTimeGlow 3s ease-in-out infinite;
+}
+
+@keyframes realTimeGlow {
+  0%, 100% { 
+    background: rgba(34, 197, 94, 0.8);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  }
+  50% { 
+    background: rgba(34, 197, 94, 1);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.9), 
+                0 0 30px rgba(34, 197, 94, 0.7);
+  }
+}
+
+/* Enhanced contribution level colors with neon effects */
+.contrib-level-0 { background: rgba(30, 41, 59, 0.8); }
+.contrib-level-1 { 
+  background: rgba(34, 197, 94, 0.3);
+  box-shadow: 0 0 5px rgba(34, 197, 94, 0.4);
+}
+.contrib-level-2 { 
+  background: rgba(34, 197, 94, 0.6);
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+.contrib-level-3 { 
+  background: rgba(34, 197, 94, 0.8);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.8);
+}
+.contrib-level-4 { 
+  background: rgba(34, 197, 94, 1);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 1), 
+              0 0 25px rgba(34, 197, 94, 0.7);
+}
+
+/* GitHub stats card enhancements */
+.github-stat-card {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.9), 
+    rgba(30, 41, 59, 0.8)
+  );
+  border: 1px solid rgba(34, 197, 94, 0.2);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
+}
+
+.github-stat-card:hover {
+  border-color: rgba(34, 197, 94, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.1);
+}
+
+.github-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(34, 197, 94, 0.8), 
+    transparent
+  );
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.github-stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Repository card enhancements */
+.repo-card {
+  background: linear-gradient(135deg, 
+    rgba(15, 23, 42, 0.95), 
+    rgba(30, 41, 59, 0.9)
+  );
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.repo-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.1);
+}
+
+/* Language tag styling */
+.language-tag {
+  background: linear-gradient(45deg, 
+    rgba(168, 85, 247, 0.2), 
+    rgba(59, 130, 246, 0.2)
+  );
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: rgba(168, 85, 247, 0.9);
+  transition: all 0.2s ease;
+}
+
+.language-tag:hover {
+  background: linear-gradient(45deg, 
+    rgba(168, 85, 247, 0.3), 
+    rgba(59, 130, 246, 0.3)
+  );
+  border-color: rgba(168, 85, 247, 0.6);
+  color: rgba(168, 85, 247, 1);
+}
