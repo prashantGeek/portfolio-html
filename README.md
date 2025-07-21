@@ -169,9 +169,8 @@ The GitHub section uses the GitHub REST API to fetch:
 - User profile information
 - Repository statistics
 - Contribution data (estimated from repo activity)
-- Programming language usage
-
-### **Setup (Optional):**
+- Programming language
+- ## **Setup (Optional):**
 For enhanced features, you can add a GitHub Personal Access Token:
 
 1. Go to [GitHub Settings > Developer Settings > Personal Access Tokens](https://github.com/settings/tokens)
