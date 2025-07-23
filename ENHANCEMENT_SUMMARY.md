@@ -157,11 +157,6 @@ This portfolio positions you as a **serious full-stack developer** with:
 
 ---
 
-## 🛠️ **Next Steps**
-1. **Update Content**: Replace placeholder data with your actual information
-2. **Add Projects**: Include your real projects with live links
-3. **Customize Colors**: Adjust the color scheme to match your brand
-4. **Deploy**: Push to production for the world to see
-5. **Share**: Include the portfolio link in your job applications
+
 
 **Good luck with your job search! This portfolio will definitely help you stand out! 🌟**
