@@ -10,7 +10,6 @@ A stunning, modern portfolio website built with Next.js, TypeScript, Tailwind CS
 - **Smooth animations** using Framer Motion
 - **Interactive elements** and micro-interactions
 - **Professional typography** and color scheme
-
 ### 📱 Components
 - **Dynamic Hero Section** with typing animation and floating elements
 - **About Section** with engaging personal introduction
