@@ -176,5 +176,3 @@ For enhanced features, you can add a GitHub Personal Access Token:
 2. Create a new token with `public_repo` and `read:user` permissions
 3. Copy `.env.example` to `.env.local`
 4. Add your token: `NEXT_PUBLIC_GITHUB_TOKEN=your_token_here`
-
-**Note:** The section works perfectly without a token using public GitHub data!
