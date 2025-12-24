@@ -175,4 +175,4 @@ For enhanced features, you can add a GitHub Personal Access Token:
 1. Go to [GitHub Settings > Developer Settings > Personal Access Tokens](https://github.com/settings/tokens)
 2. Create a new token with `public_repo` and `read:user` permissions
 3. Copy `.env.example` to `.env.local`
-4. Add your token: `NEXT_PUBLIC_GITHUB_TOKEN=your_token_here`
+4. Add your token: `NEXT_PUBLIC_GITHUB_TOKEN=your_token_here
